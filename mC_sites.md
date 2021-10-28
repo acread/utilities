@@ -40,8 +40,10 @@ conda activate seqkit
 
 cat /home/springer/read0094/SetariaStuff/Sviridis_500_v2.0.fa | seqkit locate -i -p "CG" | cut -f 1-2,4-6 > Sviridis_500_v2.0_CG.txt
 
-cat /home/springer/read0094/SetariaStuff/Sviridis_500_v2.0.fa | seqkit locate -i -p "C[ACT]G" | cut -f 1-2,4-6 > Sviridis_500_v2.0_CHG.txt
+#D is the degenerate nucleotide code for 'not C'
+#note that the -d flag must be used to indicate the presence of a degenerate base in the motif
+cat /home/springer/read0094/SetariaStuff/Sviridis_500_v2.0.fa | seqkit locate -i -d -p "CDG" | cut -f 1-2,4-6 > Sviridis_500_v2.0_CHG.txt
 
-cat /home/springer/read0094/SetariaStuff/Sviridis_500_v2.0.fa | seqkit locate -i -p "C[ACT][ACT]" | cut -f 1-2,4-6 > Sviridis_500_v2.0_CHH.txt
+cat /home/springer/read0094/SetariaStuff/Sviridis_500_v2.0.fa | seqkit locate -i -d -p "CDD" | cut -f 1-2,4-6 > Sviridis_500_v2.0_CHH.txt
 
 ````
