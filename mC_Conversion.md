@@ -26,6 +26,7 @@ awk -F$"\\t" \
  
  I'm going to try to replicate this in R...
 Note, I don't seem to have the PHJ07_S7_BSMAP_out.txt file... not sure what's going on here, may have to repeat the analysis
+### I was able to get PHJ07 to run during the resubmission to TPJ - data added below
 
 ````R
 setwd("/Users/read0094/Desktop/SetariaStuff_Assorted/ConversionRate/")
@@ -36,7 +37,7 @@ PHJ03=read.table("CP_PHJ03_S3_BSMAP_out.txt", header=FALSE, sep="\t")
 PHJ04=read.table("CP_PHJ04_S4_BSMAP_out.txt", header=FALSE, sep="\t")
 PHJ05=read.table("CP_PHJ05_S5_BSMAP_out.txt", header=FALSE, sep="\t")
 PHJ06=read.table("CP_PHJ06_S6_BSMAP_out.txt", header=FALSE, sep="\t")
-#PHJ07=read.table("CP_PHJ07_S7_BSMAP_out.txt", header=FALSE, sep="\t")
+PHJ07=read.table("CP_PHJ07_S7_BSMAP_out.txt", header=FALSE, sep="\t")
 
 #Now just grab CHH sites
 PHJ01_CHH=subset(PHJ01, V5=="CHH")
@@ -45,7 +46,7 @@ PHJ03_CHH=subset(PHJ03, V5=="CHH")
 PHJ04_CHH=subset(PHJ04, V5=="CHH")
 PHJ05_CHH=subset(PHJ05, V5=="CHH")
 PHJ06_CHH=subset(PHJ06, V5=="CHH")
-#PHJ07_CHH=subset(PHJ07, V5=="CHH")
+PHJ07_CHH=subset(PHJ07, V5=="CHH")
 
 #Conversion Rate
 PHJ01_Conv=100-(((sum(PHJ01$V8)/sum(PHJ01$V7))*100))
@@ -54,7 +55,7 @@ PHJ03_Conv=100-(((sum(PHJ03$V8)/sum(PHJ03$V7))*100))
 PHJ04_Conv=100-(((sum(PHJ04$V8)/sum(PHJ04$V7))*100))
 PHJ05_Conv=100-(((sum(PHJ05$V8)/sum(PHJ05$V7))*100))
 PHJ06_Conv=100-(((sum(PHJ06$V8)/sum(PHJ06$V7))*100))
-#PHJ07_Conv=100-(((sum(PHJ07$V8)/sum(PHJ07$V7))*100))
+PHJ07_Conv=100-(((sum(PHJ07$V8)/sum(PHJ07$V7))*100))
 
 > PHJ01_Conv
 [1] 99.62594
@@ -68,4 +69,6 @@ PHJ06_Conv=100-(((sum(PHJ06$V8)/sum(PHJ06$V7))*100))
 [1] 99.42762
 > PHJ06_Conv
 [1] 99.57129
+> PHJ07_Conv
+[1] 99.80
 ````
