@@ -1,5 +1,6 @@
 Downloading genomes is still more challenging than I think it should be -- here's one way to do it with R \
-First we check to make sure our genome of interest is available, then we point to the appropriate db and download
+First we check to make sure our genome of interest is available, then we point to the appropriate db and download \
+Note that the download will appear in a new folder with a name like "_ncbi_downloads"
 
 `````R
 # Install package dependencies
