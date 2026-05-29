@@ -122,3 +122,6 @@ interactive_map
 # save the map to the working directory
 saveWidget(interactive_map, file = "harvested_acres_slider_fixed.html", selfcontained = TRUE)
 `````
+
+The Plotly output looks like this - the slider can be used to move through the years and hovering over a state gives that year's data
+![Uploading image.png…]()
