@@ -1,7 +1,9 @@
 ### Making a heatmap of data sorted by state
 
 In this example I am using wheat acreage harvested between 1911 and 2025 that Ellie downloaded from USDA NASS \
-Note that I got a lot of help from the google default AI for this.
+Note that I got a lot of help from the google default AI for this. 
+
+It would be great to add a display for total acres/year to each year's data and to modify the heatmap color scale a bit to make low acreage a bit easier to discern.
 
 `````
 #install packages as needed
